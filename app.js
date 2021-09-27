@@ -14,7 +14,6 @@ var usersRouter = require('./routes/users');
 // server.use(require('prerender-memory-cache'));
 // server.use(require('prerender-file-cache'));
 server.use(require('./pagesCaching/pagesCaching'));
-console.log(os.tmpdir());
 
 var app = express();
 server.start();
