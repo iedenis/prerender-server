@@ -14,6 +14,8 @@ var usersRouter = require('./routes/users');
 // server.use(require('prerender-memory-cache'));
 // server.use(require('prerender-file-cache'));
 server.use(require('./pagesCaching/pagesCaching'));
+console.log('CHROME PATH', process.env.GOOGLE_CHROME_SHIM);
+console.log('CHROME PATH2', process.env.GOOGLE_CHROME_BIN);
 
 var app = express();
 server.start();
