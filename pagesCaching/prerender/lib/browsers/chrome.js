@@ -97,16 +97,16 @@ chrome.getChromeLocation = function () {
   }
 
   let platform = os.platform();
-  console.log('PLATFORM', os.platform());
   if (platform === 'darwin') {
     return '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome';
   }
 
   if (platform === 'linux') {
-	  if(process.env.NODE_ENV){
-		  return process.env.process.env.GOOGLE_CHROME_BIN
-	  }
-    return '/usr/bin/google-chrome';
+    if (process.env.NODE_ENV) {
+      return process.env.process.env.GOOGLE_CHROME_BIN;
+    } else {
+      return '/usr/bin/google-chrome';
+    }
   }
 
   if (platform === 'win32') {
