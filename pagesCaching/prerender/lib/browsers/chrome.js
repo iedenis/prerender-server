@@ -97,7 +97,7 @@ chrome.getChromeLocation = function () {
   }
 
   let platform = os.platform();
-  console.log('PLATFORM', os.platform);
+  console.log('PLATFORM', os.platform());
   if (platform === 'darwin') {
     return '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome';
   }
