@@ -5,7 +5,7 @@ require('dotenv').config();
 
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
-const prerender = require('prerender');
+const prerender = require('./pagesCaching/prerender/lib/index');
 const server = prerender();
 const os = require('os');
 
