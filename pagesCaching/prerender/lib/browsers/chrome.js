@@ -103,6 +103,9 @@ chrome.getChromeLocation = function () {
   }
 
   if (platform === 'linux') {
+	  if(process.env.NODE_ENV){
+		  return process.env.process.env.GOOGLE_CHROME_BIN
+	  }
     return '/usr/bin/google-chrome';
   }
 
