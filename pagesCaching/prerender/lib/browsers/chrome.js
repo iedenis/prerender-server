@@ -41,7 +41,9 @@ chrome.spawn = function (options) {
         '--headless',
         '--disable-gpu',
         '--remote-debugging-port=' + this.options.browserDebuggingPort,
-        '--hide-scrollbars'
+        '--hide-scrollbars',
+        '--no-sandbox'
+        
       ]
     );
 
