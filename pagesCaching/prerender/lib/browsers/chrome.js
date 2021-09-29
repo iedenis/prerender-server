@@ -43,7 +43,6 @@ chrome.spawn = function (options) {
         '--remote-debugging-port=' + this.options.browserDebuggingPort,
         '--hide-scrollbars',
         '--no-sandbox'
-        
       ]
     );
 

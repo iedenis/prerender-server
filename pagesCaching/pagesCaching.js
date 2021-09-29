@@ -1,5 +1,6 @@
 var cacheManager = require('cache-manager');
 var cacheUtils = require('./utils/cache-utils');
+
 module.exports = {
   init: function () {
     this.cache = cacheManager.caching({
