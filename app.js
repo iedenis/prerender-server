@@ -4,12 +4,12 @@ var app = express();
 var path = require('path');
 require('dotenv').config();
 const bodyParser = require('body-parser');
-const server = require('./../prerender/lib/server');
+// const server = require('./../prerender/lib/server');
 const puppeteer = require('puppeteer');
 const ssr = require('./ssr/ssr');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
-const prerender = require('./pagesCaching/prerender/lib/index');
+// const prerender = require('./pagesCaching/prerender/lib/index');
 const os = require('os');
 const crawlers = require('crawler-user-agents');
 
