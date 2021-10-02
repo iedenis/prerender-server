@@ -1,7 +1,6 @@
 const util = require('./util.js');
 const validUrl = require('valid-url');
 const { v4: uuidv4 } = require('uuid');
-const { Crawler, middleware } = require('es6-crawler-detect');
 
 const WAIT_AFTER_LAST_REQUEST = process.env.WAIT_AFTER_LAST_REQUEST || 500;
 
@@ -180,15 +179,7 @@ server.use = function (plugin) {
 };
 
 server.onRequest = function (req, res) {
-  // var CrawlerDetector = new Crawler(req);
-  // console.log(CrawlerDetector.isCrawler());
-  console.log('USER AGENT', req.headers['user-agent']);
-  // if (CrawlerDetector.isCrawler()) {
-  //   console.log('-------------------THIS IS CRAWLER----------------------');
-  // } else {
-  //   console.log('NOT A CRAWLER');
-  // }
-  // console.log('CRAWLER', req.Crawler);
+
   console.log('REQUEST QUERY', req.query);
   req.prerender = util.getOptions(req);
   // Do not rename reqId!

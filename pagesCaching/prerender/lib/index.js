@@ -24,8 +24,7 @@ exports = module.exports = (options = {}) => {
 
   app.disable('x-powered-by');
   app.use(compression());
-  app.get('*', server.onRequest);
-	
+
   //dont check content-type and just always try to parse body as json
   app.post('*', bodyParser.json({ type: () => true }), server.onRequest);
 
