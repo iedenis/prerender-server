@@ -48,7 +48,7 @@ app.use('*', async function (req, res, next) {
 
     const browser = await puppeteer.launch({
       headless: true,
-      args: ['--no-sandbox', '--disable-setuid-sandbox']
+      args: ['--no-sandbox','--disable-setuid-sandbox']
     });
     browserWSEndpoint = await browser.wsEndpoint();
     const { html, status } = await ssr(url, browserWSEndpoint);

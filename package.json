@@ -21,7 +21,7 @@
     "prerender-disk-cache": "^2.0.0",
     "prerender-file-cache": "0.0.6",
     "prerender-memory-cache": "^1.0.2",
-    "puppeteer": "^10.4.0",
+    "puppeteer": "^1.17.0",
     "uninstall": "0.0.0"
   },
   "devDependencies": {
