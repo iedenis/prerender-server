@@ -46,7 +46,10 @@ app.use('*', async function (req, res, next) {
     const url = 'https://www.we4rent.com/ru';
     let browserWSEndpoint = null;
 
-    const browser = await puppeteer.launch();
+    const browser = await puppeteer.launch({
+      headless: true,
+      args: ['--no-sandbox', '--disable-setuid-sandbox']
+    });
     browserWSEndpoint = await browser.wsEndpoint();
     const { html, status } = await ssr(url, browserWSEndpoint);
     return res.status(200).send(html);
